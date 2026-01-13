@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget |Annachi Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+  <img src="img/logo.png" alt="Logo" class="logo">
+</a>
+    <h1>Annachi Store</h1>
+    <p class="tagline">Track your spending , fast and simple!</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="contact.html">Contact & Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="budget-container">
+    <h2>Track Your Grocery Spending</h2>
+
+
+    <section>
+    <form id="budgetForm">
+    <select id="itemName" required>
+      <option value="" disabled selected>Select Item</option>
+      <option value="Rice">Rice</option>
+      <option value="Milk">Milk</option>
+      <option value="Eggs">Eggs</option>
+      <option value="Bread">Bread</option>
+      <option value="Cane Sugar">Cane Sugar</option>
+      <option value="Cooking Oil">Cooking Oil</option>
+      <option value="Whole Chicken">Whole Chicken</option>
+      <option value="Instant Noodles">Instant Noodles</option>
+      <option value="Salmon Fish">Salmon Fish</option>
+      <option value="Butter">Butter</option>
+      <option value="Orange Juice">Orange Juice</option>
+      <option value="Coffee Beans">Coffee Beans</option>
+    </select>
+    <input type="number" id="quantity" placeholder="Quantity" min="1" required />
+    <input type="date" id="spendDate" required />
+    <button type="submit">Add Entry</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Amount (RM)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="entryTable"></tbody>
+  </table>
+  <br>
+
+  <button id="clearAllBtn" class="danger">Clear All</button>
+
+
+  <h3>Total Spent: RM <span id="totalSpent">0.00</span></h3>
+  <h3>Top Spending Item: <span id="topItem">-</span></h3>
+<br>
+<hr class="divider">
+
+<h3>Spending Chart</h3>
+<canvas id="spendingChart" width="400" height="200"></canvas>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BIT4123 Group Project | Budget Tracker</p>
+  </footer>
+</body>
+</html>
