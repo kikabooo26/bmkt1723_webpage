@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator |Annachi Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+  <img src="img/logo.png" alt="Logo" class="logo">
+</a>
+    <h1>Annachi Store</h1>
+    <p class="tagline">Track your spending , fast and simple!</p>
+
+
+  
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="contact.html">Contact & Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="calc-container">
+  <h2>Select Products and Add to Cart</h2>
+
+  <hr class="divider">
+
+<div class="main-container">
+  <!-- Left side: product grid -->
+  <section class="products-grid">
+      <div class="product-grid">
+    
+    <div class="product-card">
+      <img src="img/rice.png" alt="Rice">
+      <p>Rice (RM3.50)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('rice', -1)">−</button>
+    <input type="number" id="qty-rice" value="1" min="1">
+    <button type="button" onclick="changeQty('rice', 1)">+</button>
+  </div>
+      <button onclick="addToCart('rice')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/milk.png" alt="Milk">
+      <p>Milk 1L (RM2.50)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('milk', -1)">−</button>
+    <input type="number" id="qty-milk" value="1" min="1">
+    <button type="button" onclick="changeQty('milk', 1)">+</button>
+  </div>
+      <button onclick="addToCart('milk')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/egg.png" alt="Eggs">
+      <p>Eggs (RM0.50)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('egg', -1)">−</button>
+    <input type="number" id="qty-egg" value="1" min="1">
+    <button type="button" onclick="changeQty('egg', 1)">+</button>
+  </div>
+      <button onclick="addToCart('egg')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/bread.png" alt="Bread">
+      <p>Bread (RM2.20)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('bread', -1)">−</button>
+    <input type="number" id="qty-bread" value="1" min="1">
+    <button type="button" onclick="changeQty('bread', 1)">+</button>
+  </div>
+      <button onclick="addToCart('bread')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/sugar.png" alt="Sugar">
+      <p>Cane Sugar 1Kg (RM2.00)</p>
+     <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('sugar', -1)">−</button>
+    <input type="number" id="qty-sugar" value="1" min="1">
+    <button type="button" onclick="changeQty('sugar', 1)">+</button>
+  </div>
+      <button onclick="addToCart('sugar')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/oil.png" alt="Cooking Oil">
+      <p>Cooking oil 1L (RM5.50)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('oil', -1)">−</button>
+    <input type="number" id="qty-oil" value="1" min="1">
+    <button type="button" onclick="changeQty('oil', 1)">+</button>
+  </div>
+      <button onclick="addToCart('oil')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/Chicken.png" alt="Chicken">
+      <p>Whole Chicken 1Kg (RM8.00)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('chicken', -1)">−</button>
+    <input type="number" id="qty-chicken" value="1" min="1">
+    <button type="button" onclick="changeQty('chicken', 1)">+</button>
+  </div>
+      <button onclick="addToCart('chicken')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/noodle.png" alt="Instant Noodles">
+      <p>Instant Noodles (RM3.00)</p>
+     <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('noodles', -1)">−</button>
+    <input type="number" id="qty-noodles" value="1" min="1">
+    <button type="button" onclick="changeQty('noodles', 1)">+</button>
+  </div>
+      <button onclick="addToCart('noodles')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/fish.png" alt="Fish">
+      <p>Salmon Fish (RM10.00)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('fish', -1)">−</button>
+    <input type="number" id="qty-fish" value="1" min="1">
+    <button type="button" onclick="changeQty('fish', 1)">+</button>
+  </div>
+      <button onclick="addToCart('fish')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/butter.png" alt="Butter">
+      <p>Butter 500gm (RM4.00)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('butter', -1)">−</button>
+    <input type="number" id="qty-butter" value="1" min="1">
+    <button type="button" onclick="changeQty('butter', 1)">+</button>
+  </div>
+      <button onclick="addToCart('butter')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/orange.png" alt="Orange Juice">
+      <p>Orange Juice 1L (RM3.20)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('juice', -1)">−</button>
+    <input type="number" id="qty-juice" value="1" min="1">
+    <button type="button" onclick="changeQty('juice', 1)">+</button>
+  </div>
+      <button onclick="addToCart('juice')">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/coffe.png" alt="Coffee beans">
+      <p>Coffee Beans 500gm (RM6.00)</p>
+      <div class="qty-wrapper">
+    <button type="button" onclick="changeQty('coffee', -1)">−</button>
+    <input type="number" id="qty-coffee" value="1" min="1">
+    <button type="button" onclick="changeQty('coffee', 1)">+</button>
+  </div>
+      <button onclick="addToCart('coffee')">Add</button>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Right side: sticky cart summary -->
+  <aside class="cart-summary">
+    <h3>Your Cart</h3>
+    <ul id="cartList"></ul>
+    <button onclick="clearCart()" class="cta-btn danger">Clear All</button>
+    <button onclick="calculateCartTotal()" class="cta-btn">Calculate Total</button>
+    <div id="finalOutput" class="output-box"></div>
+  </aside>
+</div>
+
+
+</main>
+
+<div id="cartNotification" class="notification"></div>
+
+
+
+  <footer>
+    <p>&copy; 2025 BIT4123 Group Project | Grocery Calculator</p>
+  </footer>
+</body>
+</html>
